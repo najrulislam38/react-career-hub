@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { MdOutlineLocationOn } from "react-icons/md";
+import { AiOutlineDollar } from "react-icons/ai";
 
 const Job = ({ job }) => {
   console.log(job);
@@ -31,14 +33,14 @@ const Job = ({ job }) => {
             {job_type}
           </button>
         </div>
-        <div className="flex gap-3 text-xl text-[#757575] font-semibold mb-6">
-          <div>
-            <span></span>
+        <div className="flex gap-6 text-xl text-[#757575] font-medium mb-6">
+          <div className="flex gap-2 items-center">
+            <MdOutlineLocationOn className="text-2xl" />
             <span>{location}</span>
           </div>
-          <div>
-            <span></span>
-            <span>{salary}</span>
+          <div className="flex gap-2 items-center">
+            <AiOutlineDollar />
+            <span className="text-2xl">{salary}</span>
           </div>
         </div>
         <div>
