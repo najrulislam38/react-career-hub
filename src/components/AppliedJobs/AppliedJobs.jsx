@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoreJobApplication } from "../../utilities/localStorage";
+import AppliedJob from "../AppliedJob/AppliedJob";
 
 const AppliedJobs = () => {
   const jobs = useLoaderData();
@@ -43,11 +44,11 @@ const AppliedJobs = () => {
   }, [jobs]);
 
   return (
-    <div className="max-w-screen-xl mx-auto px-5 md:px-10">
-      <div className="md:flex justify-between items-start">
+    <div className="my-10">
+      <div className="md:flex justify-between items-start mb-20">
         <h2 className="text-3xl">Jobs I applied: {appliedJobs.length}</h2>
         <details className="dropdown mb-3">
-          <summary className="m-1 btn">Filter The Jobs</summary>
+          <summary className="m-1 btn">Filter By </summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
             <li onClick={() => handleDisplayJobsFilter("all")}>
               <a>All</a>
@@ -63,8 +64,8 @@ const AppliedJobs = () => {
       </div>
       <section>
         <div>
-          {displayJobs.map((job) => (
-            <li key={job.id}>{job.job_title}</li>
+          {displayJobs.map((appliedJob) => (
+            <AppliedJob key={appliedJob.id} job={appliedJob}></AppliedJob>
           ))}
         </div>
       </section>

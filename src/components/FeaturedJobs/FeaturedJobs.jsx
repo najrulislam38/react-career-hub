@@ -11,7 +11,7 @@ const FeaturedJobs = () => {
       .then((data) => setJobs(data));
   }, []);
   return (
-    <div className="my-20">
+    <div id="features" className="my-20">
       <div className="text-center ">
         <h2 className="text-5xl font-bold text-[#1A1919] ">Featured Jobs</h2>
         <p className="my-7 text-[#757575]">

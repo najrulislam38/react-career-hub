@@ -42,7 +42,7 @@ const Job = ({ job }) => {
           </div>
           <div className="flex gap-2 items-center">
             <AiOutlineDollar className="text-2xl" />
-            <span className="text-2xl">{salary}</span>
+            <span className="text-xl">{salary}</span>
           </div>
         </div>
         <Link to={`/job/${id}`}>

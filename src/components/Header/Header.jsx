@@ -53,7 +53,10 @@ const Header = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <a className="btn text-xl text-white bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:bg-[#9873FF]">
+        <a
+          href="#features"
+          className="btn text-xl text-white bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:bg-[#9873FF]"
+        >
           Start Applying
         </a>
       </div>
