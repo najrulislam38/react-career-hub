@@ -43,7 +43,7 @@ const AppliedJobs = () => {
   }, [jobs]);
 
   return (
-    <div className="max-w-screen-xl">
+    <div className="max-w-screen-xl mx-auto px-5 md:px-10">
       <div className="md:flex justify-between items-start">
         <h2 className="text-3xl">Jobs I applied: {appliedJobs.length}</h2>
         <details className="dropdown mb-3">
