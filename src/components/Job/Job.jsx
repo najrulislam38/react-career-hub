@@ -1,10 +1,12 @@
 import PropTypes from "prop-types";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { AiOutlineDollar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Job = ({ job }) => {
-  console.log(job);
+  // console.log(job);
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -39,15 +41,15 @@ const Job = ({ job }) => {
             <span>{location}</span>
           </div>
           <div className="flex gap-2 items-center">
-            <AiOutlineDollar />
+            <AiOutlineDollar className="text-2xl" />
             <span className="text-2xl">{salary}</span>
           </div>
         </div>
-        <div>
+        <Link to={`/job/${id}`}>
           <button className="text-xl font-semibold  text-white  bg-gradient-to-r from-[#7E90FE] to-[#9873FF] hover:opacity-90 py-2 px-4 rounded">
             Buy Now
           </button>
-        </div>
+        </Link>
       </div>
     </div>
   );
